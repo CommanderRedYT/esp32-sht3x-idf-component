@@ -23,6 +23,7 @@
 #include "sht3x.h"
 #include "math.h"
 #include "esp_log.h"
+#include "rom/ets_sys.h"
 
 static const char *SHT3X_TAG = "sht3x";
 
