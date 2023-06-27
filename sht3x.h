@@ -25,6 +25,10 @@
 #include "esp_err.h"
 #include "driver/i2c.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #define FAHRENHEIT(celcius)         (((celcius * 9.0) / 5.0) + 32.0)
 #define KELVIN(celcius)             (celcius + 273.15)
 #define SCALE_CELCIUS               ('C')
@@ -97,3 +101,7 @@ esp_err_t sht3x_disable_heater();
 esp_err_t sht3x_read_status_register(sht3x_sensor_value_t *sensors_value);
 
 esp_err_t sht3x_clear_status_register();
+
+#ifdef __cplusplus
+}
+#endif
